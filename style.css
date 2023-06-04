@@ -1,0 +1,155 @@
+
+body{
+    background: #000000;
+    font-size: 62.5%;
+}
+
+.container{
+    padding: 2em;
+    margin-top: 5rem;
+}
+
+button,
+button:after{
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transmition: all 0.3s;
+    transition: all 0.3s;
+}
+
+button{
+    background: none;
+    cursor: pointer;
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 1em auto;
+    padding: 2em 6em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+button::before,
+button::after{
+    background: #d89416;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+button:hover{
+    color: #202454;
+}
+
+/*CONFIGURAÇÃO DO PRIMEIRO BOTÃO*/
+.btn-1::after{
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.btn-1:hover:after{
+    height: 100%;
+}
+
+/*CONFIGURAÇÃO DO SEGUNDO BOTÃO*/
+.btn-2::after{
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+
+.btn-2:hover::after{
+    width: 100%;
+}
+
+/*CONFIGURAÇÃO DO TERCEIRO BOTÃO*/
+
+.btn-3::after{
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+}
+
+.btn-3:hover:after{
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/*CONFIGURAÇÃO DO QUARTO BOTÃO*/
+
+.btn-4::before{
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.btn-4::after{
+    background: #000000;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.btn-4:hover:after{
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+}
+
+/*CONFIGURAÇÃO DO QUINTO BOTÃO*/
+
+.btn-5{
+    overflow: hidden;
+}
+
+.btn-5::after{
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+
+.btn-5:hover:after {
+    height: 100%;
+    width: 135%;
+}
+
+/*CONFIGURAÇÃO DO SEXTO BOTÃO*/
+
+.btn-6{
+    overflow: hidden;
+}
+
+.btn-6::after{
+    height: 0%;
+    left: -40%;
+    right: 0%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top right;
+    width: -50;
+}
+
+.btn-6:hover:after {
+    height: 100%;
+    width: 150%;
+    top: 100%;
+}
+
